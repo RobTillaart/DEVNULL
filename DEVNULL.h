@@ -17,9 +17,10 @@ class DEVNULL : public Stream
 public:
   DEVNULL() {};
 
-  int available() { return 0; };
-  int peek()      { return EOF; };
-  int read()      { return EOF; };
+  int    available() { return 0; };
+  int    peek()      { return EOF; };
+  int    read()      { return EOF; };
+  void   flush()     { return; };  // placeholder to keep CI happy
   size_t write(const uint8_t data) { _bottomLessPit = data; return 1; };
 
 private:
