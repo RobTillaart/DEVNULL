@@ -48,7 +48,7 @@ unittest(test_all)
   assertEqual(EOF, dn.peek());
   assertEqual(EOF, dn.read());
   assertEqual(1,   dn.write('a'));
-  assertEqual(11,  dn.print("hello world");
+  assertEqual(11,  dn.print("hello world"));
 }
 
 unittest_main()
