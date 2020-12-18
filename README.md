@@ -1,3 +1,8 @@
+
+[![Arduino CI](https://github.com/RobTillaart/DEVNULL/workflows/Arduino%20CI/badge.svg)](https://github.com/marketplace/actions/arduino_ci)
+[![License: MIT](https://img.shields.io/badge/license-MIT-green.svg)](https://github.com/RobTillaart/DEVNULL/blob/master/LICENSE)
+[![GitHub release](https://img.shields.io/github/release/RobTillaart/DEVNULL.svg?maxAge=3600)](https://github.com/RobTillaart/DEVNULL/releases)
+
 # DEVNULL
 
 Arduino library for a /dev/null stream
@@ -20,6 +25,7 @@ Performance can be increased by implementing all methods of the print interface
 with only a return 0; 
 
 ## Operation
+
 use with care
 
 See example
