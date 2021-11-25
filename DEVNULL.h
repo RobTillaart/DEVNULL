@@ -23,7 +23,7 @@ class DEVNULL : public Stream
 public:
   DEVNULL()
   {
-    _timeout = 0;     // no timeout.
+    setTimeout(0);     // no timeout.
   };
 
   int    available() { return 0; };

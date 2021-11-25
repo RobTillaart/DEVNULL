@@ -1,4 +1,5 @@
-(test run while working on improvements for 0.1.2)
+// test run on IDE 1.8.13 UNO
+// test run while working on improvements for 0.1.2)
 
 DEVNULL_performance.ino
 DEVNULL_LIB_VERSION: 0.1.1
