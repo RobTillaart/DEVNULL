@@ -39,7 +39,7 @@ public:
   };
   size_t write( const uint8_t *buffer, size_t size) 
   {
-    _bottomLessPit = buffer[size - 1];
+    if (size > 0) _bottomLessPit = buffer[size - 1];
     return size;
   };
 
