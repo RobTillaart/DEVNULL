@@ -32,7 +32,7 @@ void setup()
   delay(10);
 
   start = micros();
-  dn.write("it is dark in here...", 22);
+  dn.write((const uint8_t *) "it is dark in here...", 22);
   stop = micros();
   Serial.print("text2: \t");
   Serial.println(stop - start);
