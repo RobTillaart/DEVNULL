@@ -37,6 +37,7 @@ public:
     _bottomLessPit = data;
     return 1;
   };
+
   size_t write( const uint8_t *buffer, size_t size) 
   {
     if (size > 0) _bottomLessPit = buffer[size - 1];

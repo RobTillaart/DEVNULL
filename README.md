@@ -30,9 +30,11 @@ with only a return 0; (or at least **print(Type)** as the **println(T)** would o
 call once extra for the "\n".
 
 
-#### Version 0.1.2
+## Versions
 
-- sets the timeout for reading to 0. No need to wait longer with DEVNULl.
+#### 0.1.2
+
+- sets the timeout for reading to 0. No need to wait longer with DEVNULL.
   this improves the **find(...)** calls substantially.
 - added **size_t write( const uint8_t \*buffer, size_t size)** for faster string processing.
 
