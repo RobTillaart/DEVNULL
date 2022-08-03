@@ -84,6 +84,8 @@ void setup()
   stop = micros();
   Serial.print("find: \t");
   Serial.println(stop - start);
+  Serial.print("find: \t");
+  Serial.println(b);
   delay(10);
 
 
