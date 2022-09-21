@@ -62,16 +62,6 @@ Use with care.
 
 See examples.
 
-#### about performance
-
-Writing float or numbers to /dev/null takes substantial time as the values 
-are converted to individual bytes. To speed this up one would need to implement
-a substantial part of the print class.
-
-On the positive side, this gives a good indication of how long this conversion 
-to a stream of bytes takes, making it a valuable analysis tool. So for now this
-behavior stays "slow".
-
 
 ## Future
 
@@ -79,6 +69,9 @@ behavior stays "slow".
 
 - add byte counter (uint32_t)
 - investigate if DEVNULL can be used to harvest entropy?
+  - sum xor of all data + timestamp?
+  - enable / disable flag (complex)
+  - => /dev/entropy class?
 
 
 #### Wont

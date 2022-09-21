@@ -5,14 +5,6 @@
 // VERSION: 0.1.4
 // PURPOSE: Arduino library for a /dev/null stream - useful for testing
 //     URL: https://github.com/RobTillaart/DEVNULL
-//
-// HISTORY:
-//  0.1.0   2020-06-23  initial version.
-//  0.1.1   2020-12-18  add Arduino-CI.
-//  0.1.2   2021-11-24  update build-CI, badges, etc.
-//                      added write(data, length) + _timeOut.
-//  0.1.3   2021-12-15  update library.json, license, minor edits
-
 
 
 #include "Arduino.h"
