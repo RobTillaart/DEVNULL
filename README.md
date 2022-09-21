@@ -54,6 +54,7 @@ call once extra for the "\n".
 - **size_t write( const uint8_t \*buffer, size_t size)** implements print interface.
 Returns size.
 - **int lastByte()** returns last byte written (debug and test purpose).
+Returns -1 if no byte has been written yet.
 
 
 ## Operation
@@ -72,6 +73,7 @@ See examples.
   - sum xor of all data + timestamp?
   - enable / disable flag (complex)
   - => /dev/entropy class?
+- **flush()** could reset bottomLessPit to -1?
 
 
 #### Wont
