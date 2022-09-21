@@ -51,7 +51,7 @@ unittest(test_all)
   assertEqual(11,  dn.print("hello world"));
   assertEqual('d', dn.lastByte());
   assertEqual(13,  dn.println("hello world"));
-  assertEqual(13,  dn.lastByte());  // 13 == newline
+  assertEqual(10,  dn.lastByte());  //  10 == newline
 }
 
 unittest_main()
