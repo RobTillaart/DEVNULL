@@ -38,6 +38,10 @@ call once extra for the "\n".
   this improves the **find(...)** calls substantially.
 - added **size_t write( const uint8_t \*buffer, size_t size)** for faster string processing.
 
+#### 0.1.4
+
+- add **lastByte()** to check last byte written.
+- split of .cpp
 
 ## Interface
 
@@ -47,10 +51,9 @@ call once extra for the "\n".
 - **int read()** always return EOF.
 - **void flush()** does nothing but keeps some compilers happy.
 - **size_t write(const uint8_t data)** implements print interface. returns 1.
-
-0.1.2 added to improve performance a few percent (UNO).
-
-- **size_t write( const uint8_t \*buffer, size_t size)** implements print interface. returns size.
+- **size_t write( const uint8_t \*buffer, size_t size)** implements print interface.
+Returns size.
+- **int lastByte()** returns last byte written (debug and test purpose).
 
 
 ## Operation
@@ -59,14 +62,31 @@ Use with care.
 
 See examples.
 
+#### about performance
+
+Writing float or numbers to /dev/null takes substantial time as the values 
+are converted to individual bytes. To speed this up one would need to implement
+a substantial part of the print class.
+
+On the positive side, this gives a good indication of how long this conversion 
+to a stream of bytes takes, making it a valuable analysis tool. So for now this
+behavior stays "slow".
+
 
 ## Future
 
-- add optional delay to mimic pause / tune behaviour for simulating other devices
-  microseconds - milliseconds?
-  delay per byte or per call to write? (esp long arrays might need other performance
-  feels out of scope for /dev/null
-- add byte counter (uint32_t)
-- add lastWrittenByte() - look at the last byte written to the bottomless pit.
+#### Could
 
+- add byte counter (uint32_t)
+- investigate if DEVNULL can be used to harvest entropy?
+
+
+#### Wont
+
+- add delay to mimic pause / tune behaviour for simulating devices
+  - microseconds
+  - delay per byte, esp long arrays might need other performance
+  - out of scope for /dev/null => separate class?
+- implement Print class to increase performance?
+  - derived class?
 
