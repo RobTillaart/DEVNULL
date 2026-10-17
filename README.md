@@ -77,8 +77,9 @@ Other
 - **int read()** always return EOF.
 - **void flush()** does nothing but keeps some compilers happy.
 - **size_t write(const uint8_t data)** implements print interface. returns 1.
-- **size_t write( const uint8_t \*buffer, size_t size)** implements print interface.
+- **size_t write(const uint8_t \*buffer, size_t size)** implements print interface.
 Returns size.
+- **size_t readBytes(const uint8_t \*buffer, size_t size)** to improve performance.
 - **int lastByte()** returns last byte written (for debug and test purpose).
 Returns -1 if no byte has been written yet.
 This function is not available when **DEVNULL_ENABLE_DEBUG** is not defined.
