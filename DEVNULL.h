@@ -14,7 +14,7 @@
 
 //  Use command line -DDEVNULL_ENABLE_DEBUG
 //  or (un)comment next line to disable/enable debug
-//  #define DEVNULL_ENABLE_DEBUG
+#define DEVNULL_ENABLE_DEBUG
 
 
 class DEVNULL : public Stream
