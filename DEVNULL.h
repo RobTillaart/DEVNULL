@@ -14,7 +14,7 @@
 
 //  Use command line -DDEVNULL_ENABLE_DEBUG
 //  or (un)comment next line to disable/enable debug
-#define DEVNULL_ENABLE_DEBUG
+//  #define DEVNULL_ENABLE_DEBUG
 
 
 class DEVNULL : public Stream
@@ -29,6 +29,7 @@ public:
 
   size_t write(const uint8_t data);
   size_t write( const uint8_t *buffer, size_t size);
+  size_t readBytes( const uint8_t *buffer, size_t size);
 
 #ifdef DEVNULL_ENABLE_DEBUG
   int    lastByte();

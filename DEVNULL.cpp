@@ -59,6 +59,13 @@ size_t DEVNULL::write( const uint8_t *buffer, size_t size)
   return size;
 }
 
+size_t DEVNULL::readBytes( const uint8_t *buffer, size_t size)
+{
+  (void) buffer[size];
+  return 0;
+}
+
+
 #ifdef DEVNULL_ENABLE_DEBUG
 int DEVNULL::lastByte()
 {

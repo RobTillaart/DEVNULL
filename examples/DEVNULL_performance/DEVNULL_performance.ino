@@ -88,7 +88,7 @@ void setup()
   delay(10);
 
   start = micros();
-  int v = dn.lastByte();
+  int v = 0; //dn.lastByte();
   stop = micros();
   Serial.print("last: \t");
   Serial.println(stop - start);

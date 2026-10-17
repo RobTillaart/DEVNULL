@@ -9,6 +9,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 ## [0.2.0] - 2026-10-16
 - fix #11, simplify DEVNULL_ENABLE_DEBUG
 - add example DEVNULL_lastByte.ino
+- add size_t readBytes( const uint8_t *buffer, size_t size);
 - update readme.md
 - reduce build-CI
 - minor edits
